@@ -6,6 +6,7 @@ import math
 import os
 from numpy import*
 
+#is there a way to import multiple files without the names being Scan1.txt, etc.?
 s1 = loadtxt("scan1.txt")
 y1 = s1[:,1]
 #x1 = s1[:,0]
@@ -24,6 +25,7 @@ yb = bk[:,1]
 
 qtz = loadtxt("../../qtz_avg.txt")
 
+#switch total to a count of how many files were imported
 total=4
 length=s1.shape[1]
 #array=np.zeros(shape=(length,2))
