@@ -3,12 +3,8 @@ import os.path
 import sys
 import numpy as np
 import math
-
-import string
 import os
-import sys
 from numpy import*
-import math
 
 s1 = loadtxt("scan1.txt")
 y1 = s1[:,1]
@@ -27,7 +23,7 @@ bk = loadtxt("bkg.txt")
 yb = bk[:,1]
 
 qtz = loadtxt("../../qtz_avg.txt")
-#yq = qtz[:,0]
+
 total=4
 length=s1.shape[1]
 #array=np.zeros(shape=(length,2))
@@ -45,11 +41,7 @@ bk_sub=avg-yb
 qtz_div=bk_sub/qtz
 
 np.savetxt('Average.txt', qtz_div)
-#np.savetxt('AverageIndiv.txt', avg_a) #n
-np.savetxt('Scan1_Norm.txt', y1f) #n
-np.savetxt('Scan2_Norm.txt', y2f) #n
-np.savetxt('Scan3_Norm.txt', y3f) #n
-np.savetxt('Scan4_Norm.txt', y4f) #n
-#np.savetxt('fourteen.dat', dataI_avg)
-#np.savetxt('thirteenNorm.dat', [dataR_avg[:,0],dataR_norm])
-#np.savetxt('fourteenNorm.dat',[dataI_avg[:,0],dataI_norm])
+np.savetxt('Scan1_Norm.txt', y1f) 
+np.savetxt('Scan2_Norm.txt', y2f) 
+np.savetxt('Scan3_Norm.txt', y3f) 
+np.savetxt('Scan4_Norm.txt', y4f) 
