@@ -8,7 +8,7 @@ from numpy import*
 
 s1 = loadtxt("scan1.txt")
 y1 = s1[:,1]
-#x1 = s1[:,0]
+x1 = s1[:,0]
 
 s2 = loadtxt("scan2.txt")
 y2 = s2[:,1]
@@ -29,12 +29,11 @@ length=s1.shape[1]
 #array=np.zeros(shape=(length,2))
 #x_corr=np.xeros(shape=(length,1))
 
-#x_corr=(1/((((1/x1)-(1/800))^-1))*10^-9)/100
+x_corr=(1/((((1/x1)-(1/800))^-1))*10^-9)/100 #converts wn to IR vib freq
 y1f=(y1-yb)/qtz #n
 y2f=(y2-yb)/qtz #n
 y3f=(y3-yb)/qtz #n
 y4f=(y4-yb)/qtz #n
-#avg_a=(y1f+y2f+y3f+y4f)/total #n
 
 avg=(y1+y2+y3+y4)/total
 bk_sub=avg-yb
