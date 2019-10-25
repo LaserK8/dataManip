@@ -6,17 +6,13 @@ import math
 import os
 from numpy import*
 
-s1 = loadtxt("scan1.txt")
-y1 = s1[:,1]
+n0=0 #initial count
+nE=4 #total number (later make it ask user)
 
-s2 = loadtxt("scan2.txt")
-y2 = s2[:,1]
-
-s3 = loadtxt("scan3.txt")
-y3 = s3[:,1]
-
-s4 = loadtxt("scan4.txt")
-y4 = s4[:,1]
+while (n0 < nE):
+  s(n0) = loadtxt("scan"(n0)".txt")  #how to use n0 to make names?
+  y(n0) = s(n0)[:,1]
+  n0 += 1
 
 bk = loadtxt("bkg.txt")
 yb = bk[:,1]
